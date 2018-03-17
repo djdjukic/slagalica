@@ -1,0 +1,6 @@
+// sarma
+beli,crni,crveni,mladi,luk,sladak,kiseli,zeleni,list,kupus,mleveno,pohovano,kravlje,svinjsko,meso,Kina,polje,rizoto,hleb,pirinac,sarma;
+// ekonomija
+zemljoradnja,stocarstvo,svinjogoj,polje,poljoprivreda,fabrika,teska,laka,hemijska,industrija,postanske,prijateljske,hotelske,ciscenja,usluge,akcije,roba,veleprodaja,devize,trgovina,ekonomija;
+// Grcka
+pismo,slovo,znak,fonetski,alfabet,voda,slana,crno,jadransko,more,antika,slavna,Herodot,umetnosti,istorija,prstenovi,igre,sport,takmicenje,olimpijada,Grcka
