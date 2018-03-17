@@ -1,6 +1,5 @@
-// sarma
-beli,crni,crveni,mladi,luk,sladak,kiseli,zeleni,list,kupus,mleveno,pohovano,kravlje,svinjsko,meso,Kina,polje,rizoto,hleb,pirinac,sarma;
-// ekonomija
-zemljoradnja,stocarstvo,svinjogoj,polje,poljoprivreda,fabrika,teska,laka,hemijska,industrija,postanske,prijateljske,hotelske,ciscenja,usluge,akcije,roba,veleprodaja,devize,trgovina,ekonomija;
-// Grcka
+4
+beli,crni,crveni,mladi,luk,sladak,kiseli,zeleni,list,kupus,mleveno,pohovano,kravlje,svinjsko,meso,Kina,polje,rizoto,hleb,pirinac,sarma
+zemljoradnja,stocarstvo,svinjogoj,polje,poljoprivreda,fabrika,teska,laka,hemijska,industrija,postanske,prijateljske,hotelske,ciscenja,usluge,akcije,roba,veleprodaja,devize,trgovina,ekonomija
 pismo,slovo,znak,fonetski,alfabet,voda,slana,crno,jadransko,more,antika,slavna,Herodot,umetnosti,istorija,prstenovi,igre,sport,takmicenje,olimpijada,Grcka
+bitumen,cement,agregat,albanski,asfalt,cvrst,ludi,tezak,lomljeni,kamen,kupatilo,akvadukt,car,legija,Rim,buba,Kina,haljina,sari,svila,put
