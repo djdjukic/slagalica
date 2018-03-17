@@ -6,6 +6,9 @@
 // 14. januar 2018.
 // verzija 2
 
+// 17. mart 2018.
+// revizija 1: sređivanje koda
+
 #define WIN32_LEAN_AND_MEAN
 
 #include <Windows.h>
@@ -162,51 +165,40 @@ const Style BlueLabel(
 	BACKGROUND_BLUE | BACKGROUND_INTENSITY,
 	0, nullptr);
 
-string tables = "4\n"
-	"beli,crni,crveni,mladi,luk,sladak,kiseli,zeleni,list,kupus,mleveno,pohovano,kravlje,svinjsko,meso,Kina,polje,rizoto,hleb,pirinac,sarma\n"
-	"zemljoradnja,stocarstvo,svinjogoj,polje,poljoprivreda,fabrika,teska,laka,hemijska,industrija,postanske,prijateljske,hotelske,ciscenja,usluge,akcije,roba,veleprodaja,devize,trgovina,ekonomija\n"
-	"pismo,slovo,znak,fonetski,alfabet,voda,slana,crno,jadransko,more,antika,slavna,Herodot,umetnosti,istorija,prstenovi,igre,sport,takmicenje,olimpijada,Grcka\n"
-	"bitumen,cement,agregat,albanski,asfalt,cvrst,ludi,tezak,lomljeni,kamen,kupatilo,akvadukt,car,legija,Rim,buba,Kina,haljina,sari,svila,put";
+string tables_filename = "asocijacije.txt";
+ifstream fTables;
 
 map<string,string> table;
 
 void load_random_table()
 {
-	istringstream table_stream(tables);
+	fTables.open(tables_filename);
 	int num_of_lines;
-	table_stream >> num_of_lines;
+	fTables >> num_of_lines;
 
 	srand((unsigned int)time(nullptr));
 	int chosen_table = rand() % num_of_lines;
 
-	table_stream.ignore();
+	fTables.ignore();
 	string line;
 	for(int i = 0; i < chosen_table; i++)
 	{
-		getline(table_stream, table["line"]);
+		getline(fTables, table["line"]);
 	}
 
-	getline(table_stream, table["A1"], ',');
-	getline(table_stream, table["A2"], ',');
-	getline(table_stream, table["A3"], ',');
-	getline(table_stream, table["A4"], ',');
-	getline(table_stream, table["A"], ',');
-	getline(table_stream, table["B1"], ',');
-	getline(table_stream, table["B2"], ',');
-	getline(table_stream, table["B3"], ',');
-	getline(table_stream, table["B4"], ',');
-	getline(table_stream, table["B"], ',');
-	getline(table_stream, table["C1"], ',');
-	getline(table_stream, table["C2"], ',');
-	getline(table_stream, table["C3"], ',');
-	getline(table_stream, table["C4"], ',');
-	getline(table_stream, table["C"], ',');
-	getline(table_stream, table["D1"], ',');
-	getline(table_stream, table["D2"], ',');
-	getline(table_stream, table["D3"], ',');
-	getline(table_stream, table["D4"], ',');
-	getline(table_stream, table["D"], ',');
-	getline(table_stream, table["???"]);
+	for(char c = 'A'; c <= 'D'; c++)
+	{
+		string index;
+		index = c;
+
+		for (char i = '1'; i <= '4'; i++)
+			getline(fTables, table[index + i], ',');
+		getline(fTables, table[index], ',');
+	}
+
+	getline(fTables, table["???"]);
+
+	fTables.close();
 }
 
 class Widget
